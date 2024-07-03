@@ -8,11 +8,11 @@ namespace Exo_Temperature.Models
 {
     public struct Celsius
     {
-        public double Temperature;
+        public double Temperature { get; set; }
 
         public Fahrenheit ToFahrenheit()
         {
-            Fahrenheit f;
+            Fahrenheit f = new Fahrenheit();
             f.Temperature = Math.Round((Temperature * 1.8 ) + 32, 2);
             return f;
         }
