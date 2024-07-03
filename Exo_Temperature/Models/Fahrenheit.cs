@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,5 +22,9 @@ namespace Exo_Temperature.Models
             return c;
         }
 
+        public static explicit operator Celsius(Fahrenheit f)
+        {
+            return f.ToCelsius();
+        }
     }
 }

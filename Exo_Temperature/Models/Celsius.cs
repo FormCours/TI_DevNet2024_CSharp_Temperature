@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,5 +16,11 @@ namespace Exo_Temperature.Models
             f.Temperature = Math.Round((Temperature * 1.8 ) + 32, 2);
             return f;
         }
+    
+    
+        public static implicit operator Fahrenheit(Celsius c)
+        {
+            return c.ToFahrenheit();
+        } 
     }
 }
